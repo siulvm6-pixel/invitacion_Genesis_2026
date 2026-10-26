@@ -1,0 +1,103 @@
+ :root {
+  --sky:#79d4f5; --sky-dark:#2198d2; --navy:#173d85; --pink:#ff70b7;
+  --pink-dark:#e94f9d; --yellow:#ffd75c; --cream:#fffaf1; --mint:#b7f0df;
+  --text:#24416e; --white:#fff; --shadow:0 18px 45px rgba(35,91,151,.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--text);font-family:"Nunito",sans-serif;overflow-x:hidden}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#74d3f7 0%,#b7ebfa 62%,#f8fdff 100%);padding:16px 20px 70px}
+.topbar{max-width:1050px;margin:0 auto;display:flex;align-items:center;gap:10px;position:relative;z-index:3}
+.paw-logo{width:42px;height:42px;border-radius:15px;background:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 5px 0 rgba(23,61,133,.12)}
+.topbar-label{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:18px;color:var(--navy);flex:1}
+.music-toggle{border:2px solid rgba(255,255,255,.85);background:rgba(255,255,255,.55);border-radius:99px;padding:10px 14px;color:var(--navy);font-weight:900;cursor:pointer;backdrop-filter:blur(8px)}
+.music-toggle:hover{background:#fff}
+.hero-content{max-width:850px;margin:42px auto 0;text-align:center;position:relative;z-index:1}
+.eyebrow,.section-kicker{font-weight:900;text-transform:uppercase;letter-spacing:1.2px;font-size:12px;color:var(--navy)}
+.eyebrow{display:inline-block;background:#fff;border:2px solid rgba(255,255,255,.75);border-radius:99px;padding:9px 15px;box-shadow:0 5px 0 rgba(23,61,133,.08)}
+.eyebrow span{color:#ffb927;margin:0 4px}
+h1,h2,.name-ribbon{font-family:"Baloo 2",sans-serif}
+h1{font-size:clamp(42px,8vw,78px);line-height:.95;margin:22px 0 12px;color:var(--navy);font-weight:800;letter-spacing:-1.7px;text-shadow:0 3px 0 rgba(255,255,255,.55)}
+h1 span{color:#f44eaa;text-shadow:0 3px 0 white}
+.hero-subtitle{font-size:clamp(15px,3vw,20px);margin:0 auto;color:#315b8c}
+.hero-subtitle strong{color:#e84d9b}
+.character-stage{position:relative;height:390px;max-width:650px;margin:18px auto 0;isolation:isolate}
+.cloud{position:absolute;width:140px;height:46px;border-radius:50px;background:rgba(255,255,255,.82);filter:drop-shadow(0 4px 0 rgba(67,159,212,.08));z-index:-1}
+.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud:before{width:60px;height:60px;left:22px;top:-25px}.cloud:after{width:74px;height:74px;right:18px;top:-35px}
+.cloud-left{top:45px;left:0;transform:scale(.8)}.cloud-right{top:20px;right:0;transform:scale(.72)}
+.mountain{position:absolute;bottom:5px;clip-path:polygon(50% 0,100% 100%,0 100%);z-index:-2}
+.mountain-back{width:330px;height:245px;left:50%;transform:translateX(-50%);background:#a8ddf0}
+.mountain-front{width:490px;height:170px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#9be4d2,#54c7b4);opacity:.9}
+.photo-frame{position:absolute;left:50%;top:42px;transform:translateX(-50%);width:225px;height:245px;border:8px solid white;border-radius:48% 48% 38% 38%;background:linear-gradient(150deg,#fff0f8,#fefefe);box-shadow:0 10px 0 #ff8cc7,0 18px 28px rgba(39,91,143,.16);overflow:hidden;z-index:2}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center}
+.photo-placeholder{height:100%;display:none;flex-direction:column;align-items:center;justify-content:center;padding:15px;color:var(--navy);background:radial-gradient(circle at 20% 20%,#fff 0 4px,transparent 5px),linear-gradient(145deg,#ffe3f1,#dff7ff)}
+.photo-heart{font-size:50px;color:#f75ba8;line-height:1}
+.photo-title{font-family:"Baloo 2";font-weight:800;font-size:22px;line-height:1.05;margin:6px 0}
+.photo-note{font-size:11px;line-height:1.3}
+.photo-sparkle{position:absolute;color:#ffbf2e;font-size:35px;z-index:3}.sparkle-a{top:12px;right:16px}.sparkle-b{left:10px;bottom:20px;color:#5ec8ef}
+.character-bubble{position:absolute;z-index:4;width:112px;height:112px;border-radius:35px;background:#fff;box-shadow:0 8px 0 rgba(23,61,133,.1),var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;border:5px solid #fff}
+.character-emoji{font-size:55px;line-height:1.05;filter:drop-shadow(0 3px 0 rgba(0,0,0,.05))}
+.character-name{font-family:"Baloo 2";font-size:18px;font-weight:800}
+.skye{left:calc(50% - 205px);top:150px;transform:rotate(-7deg);border-color:#ffb4dc}
+.everest{right:calc(50% - 205px);top:150px;transform:rotate(7deg);border-color:#a8e5fa}
+.number-badge{position:absolute;right:calc(50% - 165px);bottom:5px;width:90px;height:90px;border-radius:50%;background:var(--yellow);border:6px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 7px 0 #efb839;z-index:5;color:var(--navy);transform:rotate(8deg)}
+.number-badge strong{font-family:"Baloo 2";font-size:42px;line-height:.8}.number-badge span{font-size:10px;font-weight:900;text-transform:uppercase}
+.floating-paw{position:absolute;color:#e951a5;font-size:34px;opacity:.85}.paw-a{left:10%;top:48px;transform:rotate(-25deg)}.paw-b{right:10%;bottom:65px;color:#259ed8;transform:rotate(22deg)}
+.name-ribbon{display:inline-flex;flex-direction:column;background:var(--pink);color:white;padding:8px 44px 11px;border-radius:18px;transform:rotate(-1deg);box-shadow:0 7px 0 #d94391;min-width:260px;margin-top:-3px;position:relative;z-index:6}
+.name-ribbon span{font-size:clamp(32px,6vw,48px);line-height:.95;font-weight:800;text-shadow:0 3px 0 rgba(171,42,108,.18)}
+.name-ribbon small{font-size:13px;font-family:"Nunito";font-weight:900;margin-top:5px}
+.primary-button,.secondary-button,.whatsapp-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:900;border-radius:99px;transition:transform .18s,box-shadow .18s}
+.primary-button{margin-top:28px;background:var(--navy);color:white;padding:15px 24px;box-shadow:0 6px 0 #10295e}
+.primary-button:hover,.secondary-button:hover,.whatsapp-button:hover{transform:translateY(-2px)}
+.tiny-note{font-size:12px;opacity:.75;margin:13px 0 0}
+.sky-decor{position:absolute;z-index:0;opacity:.24;font-size:42px;color:#fff}.decor-one{top:150px;left:6%}.decor-two{top:380px;right:4%;transform:rotate(20deg)}
+.section-wrap{width:min(100% - 36px,760px);margin-left:auto;margin-right:auto}
+.intro{text-align:center;padding:58px 15px 25px}
+.section-kicker{margin-bottom:10px}
+h2{font-size:clamp(31px,6vw,48px);line-height:1.03;margin:0 0 14px;color:var(--navy);font-weight:800}
+h2 span{color:var(--pink-dark)}
+.intro-copy{font-size:17px;line-height:1.65;max-width:520px;margin:0 auto;color:#55708f}
+.details-card{background:#fff;border:2px solid #e5f5fc;border-radius:28px;padding:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1px 1fr;gap:20px;align-items:center}
+.detail-item{display:flex;align-items:center;gap:14px;min-width:0}
+.detail-icon{width:54px;height:54px;flex-shrink:0;border-radius:18px;display:grid;place-items:center;font-size:27px}
+.date-icon{background:#e7f6ff}.place-icon{background:#ffe6f3}
+.detail-item>div:last-child{display:flex;flex-direction:column;gap:3px}
+.detail-label{font-size:12px;text-transform:uppercase;font-weight:900;letter-spacing:1px;color:#7790a9}
+.detail-item strong{font-size:15px;line-height:1.3;color:var(--navy)}
+.detail-extra{font-size:13px;color:#68809b}
+.detail-divider{height:70px;background:#e8eff8}
+.secondary-button{grid-column:1/-1;justify-self:center;background:#e8f8ff;color:var(--navy);padding:13px 22px;border:2px solid #c8efff}
+.countdown-section{text-align:center;padding:68px 0 56px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px auto 0;max-width:570px}
+.count-box{padding:19px 5px 15px;border-radius:20px;background:#fff;box-shadow:0 8px 0 #e7eff9;border:2px solid #f0f7ff}
+.count-box:nth-child(1){background:#ffe4f1}.count-box:nth-child(2){background:#e1f6ff}.count-box:nth-child(3){background:#fff3c7}.count-box:nth-child(4){background:#eee5ff}
+.count-box strong{display:block;font-family:"Baloo 2";font-size:clamp(29px,6vw,43px);line-height:1;color:var(--navy)}
+.count-box span{font-size:12px;font-weight:900;text-transform:uppercase;color:#627b98}
+.countdown-message{font-weight:800;color:#64819f;margin-top:25px}
+.rsvp-card{position:relative;text-align:center;padding:38px 24px 34px;border-radius:30px;background:linear-gradient(135deg,#e2f8ff,#fff0f8);border:2px solid #fff;box-shadow:var(--shadow);overflow:hidden}
+.rsvp-card h2{margin-top:4px}.rsvp-card p{max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6}
+.rsvp-stars{color:#ffc43d;letter-spacing:18px;margin-bottom:12px}
+.whatsapp-button{margin-top:12px;background:#20bd71;color:#fff;padding:15px 24px;box-shadow:0 6px 0 #139c5a}
+.whatsapp-button span{font-size:22px}
+.closing{text-align:center;padding:65px 0 55px}
+.paw-trail{font-size:28px;letter-spacing:5px;color:#ee7cb9;margin-bottom:18px}
+.closing>p:first-of-type{margin:0 0 0;color:#7890a7;font-weight:800}
+.closing h2{font-size:55px;color:#f050a4;margin:0}
+.closing h2 span{color:#4ab9e8}
+.closing-line{font-family:"Baloo 2";font-size:21px;color:var(--navy);margin:0}
+.confetti-row{display:flex;justify-content:center;gap:30px;font-size:22px;color:#ef65aa;margin-top:24px}.confetti-row span:nth-child(2n){color:#4ebfe9}.confetti-row span:nth-child(3){color:#ffbd2e}
+footer{background:#173d85;color:#dceeff;text-align:center;padding:22px 15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:12px;font-weight:800}
+@media(max-width:600px){
+ .hero{padding:13px 14px 56px}.topbar-label{font-size:15px}.music-toggle{padding:9px 11px;font-size:12px}.hero-content{margin-top:30px}
+ .character-stage{height:340px;margin-top:8px}.photo-frame{width:190px;height:218px;top:45px}.character-bubble{width:84px;height:88px;border-width:4px;border-radius:27px}.character-emoji{font-size:42px}.character-name{font-size:15px}
+ .skye{left:calc(50% - 160px);top:150px}.everest{right:calc(50% - 160px);top:150px}.number-badge{right:calc(50% - 140px);bottom:4px;width:75px;height:75px;border-width:5px}.number-badge strong{font-size:34px}
+ .mountain-back{width:270px;height:210px}.mountain-front{width:370px;height:140px}.paw-a{left:2%;top:55px}.paw-b{right:2%;bottom:55px}
+ .name-ribbon{min-width:230px;padding:8px 28px 10px}.name-ribbon small{font-size:12px}
+ .details-card{padding:22px 18px;grid-template-columns:1fr;gap:18px}.detail-divider{height:1px;width:100%}.detail-item strong{font-size:15px}
+ .countdown{gap:7px}.count-box{border-radius:15px;padding:15px 2px 12px}.count-box span{font-size:10px}
+ .rsvp-card{padding:32px 18px}.whatsapp-button{padding:14px 18px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
