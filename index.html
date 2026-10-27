@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#69c9f3">
+  <meta name="description" content="¡Acompáñanos a celebrar los dos años de Génesis en una aventura llena de alegría!">
+  <title>¡Génesis cumple 2 años! 🐾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky-decor decor-one" aria-hidden="true">✦</div>
+  <div class="sky-decor decor-two" aria-hidden="true">🐾</div>
+  <header class="hero">
+    <nav class="topbar" aria-label="Navegación principal">
+      <span class="paw-logo" aria-hidden="true">🐾</span>
+      <span class="topbar-label">¡Misión cumpleaños!</span>
+      <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">
+        <span id="musicIcon" aria-hidden="true">♫</span> <span id="musicLabel">Activar música</span>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow"><span>★</span> ¡Atención, equipo de cachorros! <span>★</span></p>
+      <h1>¡Tenemos una<br><span>misión especial!</span></h1>
+      <p class="hero-subtitle">Celebrar los <strong>2 años</strong> de nuestra pequeña aventurera</p>
+
+      <div class="character-stage" aria-label="Espacio ilustrado para la temática de cachorros">
+        <div class="cloud cloud-left"></div><div class="cloud cloud-right"></div>
+        <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="character-bubble skye"><img class="character-image" src="assets/skye.png" alt="Skye"><span class="character-name">Skye</span></div>
+        <div class="photo-frame">
+          <img id="genesisPhoto" src="assets/genesis.jpg" alt="Fotografía de Génesis" onerror="this.style.display='none';document.getElementById('photoPlaceholder').style.display='flex'">
+          <div id="photoPlaceholder" class="photo-placeholder">
+            <span class="photo-heart">♡</span>
+            <span class="photo-title">Aquí va la foto<br>de Génesis</span>
+            <span class="photo-note">La añadiremos cuando elijas<br>tu fotografía favorita</span>
+          </div>
+          <span class="photo-sparkle sparkle-a">✦</span><span class="photo-sparkle sparkle-b">✧</span>
+        </div>
+        <div class="character-bubble everest"><img class="character-image" src="assets/everest.png" alt="Everest"><span class="character-name">Everest</span></div>
+        <div class="number-badge"><span>cumple</span><strong>2</strong><span>añitos</span></div>
+        <div class="floating-paw paw-a">🐾</div><div class="floating-paw paw-b">🐾</div>
+      </div>
+
+      <div class="name-ribbon"><span>Génesis</span><small>¡Nuestra aventura favorita!</small></div>
+      <a class="primary-button" href="#detalles">Descubrir la misión <span aria-hidden="true">↓</span></a>
+      <p class="tiny-note">Desliza para conocer todos los detalles</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro section-wrap" id="detalles">
+      <div class="section-kicker">📣 ¡Llamado a la aventura!</div>
+      <h2>¡Ningún cachorro<br><span>se queda fuera!</span></h2>
+      <p class="intro-copy">Nos encantaría que nos acompañaras a celebrar un día lleno de juegos, abrazos y mucha diversión para Génesis.</p>
+    </section>
+
+    <section class="details-card section-wrap" aria-label="Detalles de la fiesta">
+      <div class="detail-item">
+        <div class="detail-icon date-icon" aria-hidden="true">📅</div>
+        <div><span class="detail-label">¿Cuándo?</span><strong>Sábado, 21 de noviembre</strong><span class="detail-extra">de 2026 · 1:30 p. m.</span></div>
+      </div>
+      <div class="detail-divider"></div>
+      <div class="detail-item">
+        <div class="detail-icon place-icon" aria-hidden="true">📍</div>
+        <div><span class="detail-label">¿Dónde?</span><strong>Salón Cabaña Don Javi</strong><span class="detail-extra">¡Te esperamos para celebrar!</span></div>
+      </div>
+      <a class="secondary-button" href="https://maps.app.goo.gl/d4duqPMXZsWoVob97?g_st=ic" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps <span aria-hidden="true">↗</span></a>
+      <div class="route-video">
+        <video class="route-video-player" controls playsinline preload="metadata" aria-label="Video con indicaciones para llegar al Salón Cabaña Don Javi">
+          <source src="assets/Ruta_salon_Don_Javi.MOV" type="video/quicktime">
+          Tu navegador no puede reproducir este video. Puedes abrir el archivo Ruta_salon_Don_Javi.MOV desde la carpeta assets.
+        </video>
+      </div>
+    </section>
+
+    <section class="countdown-section section-wrap">
+      <div class="section-kicker">⏰ Cuenta regresiva</div>
+      <h2>¡La misión está<br><span>por comenzar!</span></h2>
+      <div class="countdown" aria-label="Cuenta regresiva al cumpleaños">
+        <div class="count-box"><strong id="days">--</strong><span>días</span></div>
+        <div class="count-box"><strong id="hours">--</strong><span>horas</span></div>
+        <div class="count-box"><strong id="minutes">--</strong><span>minutos</span></div>
+        <div class="count-box"><strong id="seconds">--</strong><span>segundos</span></div>
+      </div>
+      <p id="countdownMessage" class="countdown-message">¡Prepárate para una gran aventura!</p>
+    </section>
+
+    <section class="rsvp-card section-wrap">
+      <div class="rsvp-stars" aria-hidden="true">✦ ✧ ✦</div>
+      <div class="section-kicker">💌 Confirma tu asistencia</div>
+      <h2>¿Contamos contigo?</h2>
+      <p>Avísanos si podrás acompañarnos. ¡Nos hará mucha ilusión verte!</p>
+      <a id="rsvpButton" class="whatsapp-button" href="#529671213792" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☏</span> Confirmar por WhatsApp</a>
+      <p class="tiny-note">Se abrirá un mensaje listo para enviar.</p>
+    </section>
+
+    <section class="closing section-wrap">
+      <div class="paw-trail" aria-hidden="true">🐾　🐾　🐾</div>
+      <p>Con mucho cariño,</p>
+      <h2>Génesis <span>♡</span></h2>
+      <p class="closing-line">¡Skye, Everest y yo te esperamos!</p>
+      <div class="confetti-row" aria-hidden="true"><span>★</span><span>✦</span><span>🐾</span><span>✧</span><span>★</span></div>
+    </section>
+  </main>
+
+  <footer><span>Hecho con mucho amor para Génesis</span><span>🐾 21 · 11 · 2026 🐾</span></footer>
+
+  <audio id="birthdayMusic" preload="none" loop>
+    <source src="assets/musica.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
