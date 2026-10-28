@@ -29,7 +29,7 @@ setInterval(updateCountdown, 1000);
 // The generic WhatsApp share link lets guests choose a recipient for now.
 const rsvpText = "¡Hola! Confirmo mi asistencia al segundo cumpleaños de Génesis, el sábado 21 de noviembre de 2026 a la 1:30 p. m. en Salón Cabaña Don Javi. 🐾";
 document.getElementById("rsvpButton").href =
-  "https://wa.me/?text=" + encodeURIComponent(rsvpText);
+  "https://wa.me/529671213792?text=" + encodeURIComponent(rsvpText);
 
 const music = document.getElementById("birthdayMusic");
 const musicToggle = document.getElementById("musicToggle");
